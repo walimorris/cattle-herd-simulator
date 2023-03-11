@@ -57,7 +57,7 @@ In this way we can offset coordinates by a meter.
 returns a dict (map) that models a device id -> and array containing the 
 initial [lat, long] coordinates for each device. 
 
-example: deviceid -> [47.963996, -122.162001]
+example: deviceid -> [47.134559, -106.223248]
 """
 def initalizeDeviceLocationData(cattle_ids):
     x = 0 
@@ -67,7 +67,7 @@ def initalizeDeviceLocationData(cattle_ids):
     # generate initial location data for each device in the herd
     # a device is known by the 'cattle_id' each cattle with a device
     for i in range(len(cattle_ids)):
-        coords = offset(47.963996, -122.162001, x, y)
+        coords = offset(47.134559, -106.223248, x, y) # initial coordinates
         cattle_map[cattle_ids[i]] = coords
         y = y + 1
         if (y == 5):
